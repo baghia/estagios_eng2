@@ -66,11 +66,11 @@ public class CadastroConvenio extends HttpServlet {
             
             enderecoDao.inserir(endereco);
            
-            response.sendRedirect("EditarConvenio.jsp?id="+convenio.getId_convenio());
+            response.sendRedirect("GerenciamentoConvenio/EditarConvenio.jsp?id="+convenio.getId_convenio());
         } catch (Exception e) {
             
             
-             response.sendRedirect("CadastroConvenio.jsp");
+             response.sendRedirect("GerenciamentoConvenio/CadastroConvenio.jsp");
             
             
         }

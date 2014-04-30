@@ -64,11 +64,11 @@ public class CadastroSocioConvenio extends HttpServlet {
             socio_convenioDAO.inserir(socio_convenio);
 
            
-            response.sendRedirect("EditarConvenio.jsp?id="+request.getParameter("id_convenio"));
+            response.sendRedirect("GerenciamentoConvenio/EditarConvenio.jsp?id="+request.getParameter("id_convenio"));
         } catch (Exception e) {
             
             
-             response.sendRedirect("CadastroSocioConvenio.jsp?erro=1");
+             response.sendRedirect("GerenciamentoConvenio/CadastroSocioConvenio.jsp?erro=1");
             
             
         }

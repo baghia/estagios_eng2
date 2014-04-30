@@ -40,9 +40,9 @@ public class ExcluirCurso extends HttpServlet {
             Curso c = new Curso();
             c.setId(Integer.parseInt(request.getParameter("idCurso")));
             cursoDAO.excluir(c);
-            response.sendRedirect("GerenciamentoCurso.jsp");
+            response.sendRedirect("GerenciamentoConvenio/GerenciamentoCurso.jsp");
     }catch (Exception e) {
-             response.sendRedirect("GerenciamentoCurso.jsp");
+             response.sendRedirect("GerenciamentoConvenio/GerenciamentoCurso.jsp");
         }
     }
 

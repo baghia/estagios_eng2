@@ -78,11 +78,11 @@ public class EditarSocioConvenio extends HttpServlet {
             socio_convenioDAO.editar(socio_convenio.getId_socio(),socio_convenio);
 
            
-            response.sendRedirect("EditarConvenio.jsp?id="+request.getParameter("id_convenio"));
+            response.sendRedirect("GerenciamentoConvenio/EditarConvenio.jsp?id="+request.getParameter("id_convenio"));
         } catch (Exception e) {
             
             
-             response.sendRedirect("CadastroSocioConvenio.jsp?id_socio_convenio="+request.getParameter("id_socio_convenio"));
+             response.sendRedirect("GerenciamentoConvenio/CadastroSocioConvenio.jsp?id_socio_convenio="+request.getParameter("id_socio_convenio"));
             
             
         }

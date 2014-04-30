@@ -68,10 +68,10 @@ public class ExcluirContatoConvenio extends HttpServlet {
 
             contato_convenioDAO.excluir(Integer.parseInt(request.getParameter("id_contato_convenio")));
 
-             response.sendRedirect("EditarConvenio.jsp?id=" + request.getParameter("id_convenio"));
+             response.sendRedirect("GerenciamentoConvenio/EditarConvenio.jsp?id=" + request.getParameter("id_convenio"));
         } catch (Exception e) {
 
-            response.sendRedirect("EditarConvenio.jsp?id=" + request.getParameter("id_convenio"));
+            response.sendRedirect("GerenciamentoConvenio/EditarConvenio.jsp?id=" + request.getParameter("id_convenio"));
 
         }
 

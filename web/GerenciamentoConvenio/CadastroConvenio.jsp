@@ -27,7 +27,7 @@
     </head>
     <body>
         <div class="container">
-            <form class="form-horizontal" role="form" action="CadastroConvenio" method="Post">
+            <form class="form-horizontal" role="form" action="../CadastroConvenio" method="Post">
                 <div>
                     <h4 class="form-heading">Convenios:</h4>
                 </div>

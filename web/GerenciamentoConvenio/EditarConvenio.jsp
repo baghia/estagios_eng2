@@ -38,7 +38,7 @@
     </head>
     <body>
         <div class="container">
-            <form class="form-horizontal" role="form" action="EditarConvenios" method="Post">
+            <form class="form-horizontal" role="form" action="../EditarConvenios" method="Post">
                 <input type="hidden" name="id_convenio" value="<%= convenio.getId_convenio()%>">
 
                 <div>
@@ -168,7 +168,7 @@
                     <td class="col-lg-3 h5 text-center"><%= listSocioConvenio.get(i).getRg()%></td>
                     <td class="col-lg-3 h5 text-center"><%= listSocioConvenio.get(i).getCpf()%></td>
                     <td class="col-lg-1 h5 text-center"><a class="btn btn-primary" href="EditarSocioConvenio.jsp?id_socio_convenio=<%= listSocioConvenio.get(i).getId_socio()%>"><span class="glyphicon glyphicon-pencil"></span> Editar</a></td>
-                    <td class="col-lg-1 h5 text-center"><form action="ExcluirSocioConvenio" method="post"><input type="hidden" name="id_socio_convenio" value="<%= listSocioConvenio.get(i).getId_socio()%>"/><input type="hidden" name="id_convenio" value="<%= convenio.getId_convenio()%>"/><button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-remove"></span> Desativar</button></form></td></tr>    
+                    <td class="col-lg-1 h5 text-center"><form action="../ExcluirSocioConvenio" method="post"><input type="hidden" name="id_socio_convenio" value="<%= listSocioConvenio.get(i).getId_socio()%>"/><input type="hidden" name="id_convenio" value="<%= convenio.getId_convenio()%>"/><button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-remove"></span> Desativar</button></form></td></tr>    
 
                 <%
                     }
@@ -192,7 +192,7 @@
                 <tr><td class="col-lg-6 h5 text-center"><%= listContatoConvenio.get(i).getNome()%></td>
                     <td class="col-lg-3 h5 text-center"><%= listContatoConvenio.get(i).getCargo()%></td>
                     <td class="col-lg-1 h5 text-center"><a class="btn btn-primary" href="EditarContatoConvenio.jsp?id_contato_convenio=<%= listContatoConvenio.get(i).getId_contato()%>"><span class="glyphicon glyphicon-pencil"></span> Editar</a></td>
-                    <td class="col-lg-1 h5 text-center"><form action="ExcluirContatoConvenio" method="post"><input type="hidden" name="id_contato_convenio" value="<%= listContatoConvenio.get(i).getId_contato()%>"/><input type="hidden" name="id_convenio" value="<%= convenio.getId_convenio()%>"/><button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-remove"></span> Desativar</button></form></td></tr>    
+                    <td class="col-lg-1 h5 text-center"><form action="../ExcluirContatoConvenio" method="post"><input type="hidden" name="id_contato_convenio" value="<%= listContatoConvenio.get(i).getId_contato()%>"/><input type="hidden" name="id_convenio" value="<%= convenio.getId_convenio()%>"/><button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-remove"></span> Desativar</button></form></td></tr>    
 
                 <%
                     }

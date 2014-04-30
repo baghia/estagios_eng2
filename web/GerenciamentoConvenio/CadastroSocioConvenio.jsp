@@ -14,7 +14,7 @@
     </head>
     <body>
         <div class="container">
-            <form class="form-horizontal" role="form" action="CadastroSocioConvenio" method="Post">
+            <form class="form-horizontal" role="form" action="../CadastroSocioConvenio" method="Post">
                 <input type="hidden" name="id_convenio" value="<%= request.getParameter("id_convenio")%>">
 
                 <div>

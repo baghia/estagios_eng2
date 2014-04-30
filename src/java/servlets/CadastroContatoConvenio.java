@@ -54,11 +54,11 @@ public class CadastroContatoConvenio extends HttpServlet {
             contato_convenioDAO.inserir(contato_convenio);
 
            
-            response.sendRedirect("EditarConvenio.jsp?id="+request.getParameter("id_convenio"));
+            response.sendRedirect("GerenciamentoConvenio/EditarConvenio.jsp?id="+request.getParameter("id_convenio"));
         } catch (Exception e) {
             
             
-             response.sendRedirect("CadastroContatoConvenio.jsp?erro=1");
+             response.sendRedirect("GerenciamentoConvenio/CadastroContatoConvenio.jsp?erro=1");
             
             
         }

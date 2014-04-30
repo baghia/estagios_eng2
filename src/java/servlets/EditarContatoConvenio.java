@@ -82,11 +82,11 @@ public class EditarContatoConvenio extends HttpServlet {
             contato_convenioDAO.editar(contato_convenio.getId_contato(),contato_convenio);
 
            
-            response.sendRedirect("EditarConvenio.jsp?id="+request.getParameter("id_convenio"));
+            response.sendRedirect("GerenciamentoConvenio/EditarConvenio.jsp?id="+request.getParameter("id_convenio"));
         } catch (Exception e) {
             
             
-             response.sendRedirect("EditarContatoConvenio.jsp?id_contato_convenio="+request.getParameter("id_contato_convenio"));
+             response.sendRedirect("GerenciamentoConvenio/EditarContatoConvenio.jsp?id_contato_convenio="+request.getParameter("id_contato_convenio"));
             
             
         }

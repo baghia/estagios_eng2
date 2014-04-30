@@ -18,7 +18,7 @@
     </head>
     <body>
         <div class="container">
-            <form class="form-horizontal" role="form" action="EditarContatoConvenio" method="Post">
+            <form class="form-horizontal" role="form" action="../EditarContatoConvenio" method="Post">
                 <input type="hidden" name="id_contato_convenio" value="<%= contato_convenio.getId_contato()%>">
                 <input type="hidden" name="id_convenio" value="<%= contato_convenio.getId_convenio()%>">
 

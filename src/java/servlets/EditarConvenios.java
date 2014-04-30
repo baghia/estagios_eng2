@@ -71,11 +71,11 @@ public class EditarConvenios extends HttpServlet {
             
             enderecoDao.editar(endereco.getId_endereco(),endereco);
            
-            response.sendRedirect("Convenios.jsp");
+            response.sendRedirect("GerenciamentoConvenio/Convenios.jsp");
         } catch (Exception e) {
             
             
-            response.sendRedirect("EditarConvenio.jsp?id="+request.getParameter("id_convenio"));
+            response.sendRedirect("GerenciamentoConvenio/EditarConvenio.jsp?id="+request.getParameter("id_convenio"));
             
             
         }

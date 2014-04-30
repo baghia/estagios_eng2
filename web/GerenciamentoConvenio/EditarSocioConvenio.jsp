@@ -24,7 +24,7 @@
     </head>
     <body>
         <div class="container">
-            <form class="form-horizontal" role="form" action="EditarSocioConvenio" method="Post">
+            <form class="form-horizontal" role="form" action="../EditarSocioConvenio" method="Post">
 
                 <input type="hidden" name="id_socio_convenio" value="<%= socio_convenio.getId_socio()%>">
                 <input type="hidden" name="id_convenio" value="<%= socio_convenio.getId_convenio()%>">

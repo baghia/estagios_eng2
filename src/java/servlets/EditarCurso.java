@@ -44,9 +44,9 @@ public class EditarCurso extends HttpServlet {
             c.setTipo(request.getParameter("tipoCurso"));
             c.setTurno(request.getParameter("turnoCurso"));
             cursoDAO.alterarCurso(c);
-            response.sendRedirect("GerenciamentoCurso.jsp");
+            response.sendRedirect("GerenciamentoConvenio/GerenciamentoCurso.jsp");
     }catch (Exception e) {
-             response.sendRedirect("GerenciamentoCurso.jsp");
+             response.sendRedirect("GerenciamentoConvenio/GerenciamentoCurso.jsp");
         }
     }
 
