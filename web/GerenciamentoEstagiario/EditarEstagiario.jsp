@@ -5,8 +5,7 @@
 --%>
 
 <%@page import="bd.CursoDAO"%>
-<%@page import="model.Curso"%>
-<%@page import="model.Curso"%>
+<%@page import="beans.Curso"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -21,7 +20,7 @@
         <script src="../js/bootstrap.js" type="text/javascript"></script>
         <link rel="stylesheet" href="../css/bootstrap.min.css">
         <script src="../js/bootstrap.min.js"></script>
-        <title>Gerenciamento de Curso</title>
+        <title>Gerenciamento de Estágiario</title>
     </head>
     <body>
         <div class="container">
@@ -29,7 +28,7 @@
                 <input type="hidden" name="idCurso" value="<%= c.getId()%>">
 
                 <div>
-                    <h4 class="form-heading">Editar Curso</h4>
+                    <h4 class="form-heading">Editar Estágiario</h4>
                 </div>
 
                 <div class="form-group">

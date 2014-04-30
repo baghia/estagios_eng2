@@ -14,13 +14,13 @@
         <script src="../js/bootstrap.js" type="text/javascript"></script>
         <link rel="stylesheet" href="../css/bootstrap.min.css">
         <script src="../js/bootstrap.min.js"></script>
-        <title>Gerenciamento de Curso</title>
+        <title>Gerenciamento de Estágiario</title>
     </head>
     <body>
         <div class="container">
             <form class="form-horizontal" role="form" action="CadastroCurso" method="Post">
                 <div>
-                    <h4 class="form-heading">Cadastro de Curso</h4>
+                    <h4 class="form-heading">Cadastro de Estágiario</h4>
                 </div>
 
                 <div class="form-group">

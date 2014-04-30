@@ -6,8 +6,7 @@
 
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.List"%>
-<%@page import="model.Curso"%>
-<%@page import="model.Curso"%>
+<%@page import="beans.Curso"%>
 <%@page import="bd.CursoDAO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>

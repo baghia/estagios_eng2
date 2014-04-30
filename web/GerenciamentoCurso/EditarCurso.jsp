@@ -5,8 +5,7 @@
 --%>
 
 <%@page import="bd.CursoDAO"%>
-<%@page import="model.Curso"%>
-<%@page import="model.Curso"%>
+<%@page import="beans.Curso"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
