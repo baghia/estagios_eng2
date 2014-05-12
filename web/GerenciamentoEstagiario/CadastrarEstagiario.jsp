@@ -18,29 +18,141 @@
     </head>
     <body>
         <div class="container">
-            <form class="form-horizontal" role="form" action="CadastroCurso" method="Post">
+            <form class="form-horizontal" role="form" action="CadastroEstagiario" method="Post">
                 <div>
                     <h4 class="form-heading">Cadastro de Estágiario</h4>
                 </div>
-
+                
+                 <div>
+                    <h4 class="form-heading">Estágiario</h4>
+                </div>
+                
                 <div class="form-group">
-                    <label class="col-sm-2 control-label">Nome do Curso:</label>
+                    <label class="col-sm-2 control-label">Matrícula:</label>
                     <div class="col-sm-3">
-                        <input type="text" class="form-control" name="nomeCurso" required>
+                        <input type="text" class="form-control" name="matricula">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Nome Completo:</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" name="nome">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">RG:</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" name="rg">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">CPF:</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" name="cpf">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Data de Nascimento:</label>
+                    <div class="col-sm-3">
+                        <input type="date" class="form-control" name="dtNascimento">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Nome do Pai:</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" name="nomePai">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Nome da Mãe:</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" name="nomeMae">
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label class="col-sm-2 control-label">Tipo do Curso:</label>
+                    <label class="col-sm-2 control-label">Disponibilidade de Horário para Estagio:</label>
                     <div class="col-sm-3">
-                        <input type="text" class="form-control" name="tipoCurso" required>
+                        <input type="text" class="form-control" name="disponibilidade">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Empresa que Trabalha:</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" name="empresaTrabalha">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Curso:</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" name="Curso">
+                    </div>
+                </div>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <div>
+                    <h4 class="form-heading">Endereço</h4>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Logradouro:</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" name="logradouro">
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label class="col-sm-2 control-label">Turno:</label>
+                    <label class="col-sm-2 control-label">Bairro:</label>
                     <div class="col-sm-3">
-                        <input type="text" class="form-control" name="turnoCurso" required>
+                        <input type="text" class="form-control" name="bairro">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Cidade:</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" name="cidade">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Estado:</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" name="estado">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">CEP:</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" name="cep" pattern="[0-9]{5}-[0-9]{3}" placeholder="00000-000">
                     </div>
                 </div>
 

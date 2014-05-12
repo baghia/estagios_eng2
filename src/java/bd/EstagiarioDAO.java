@@ -19,7 +19,7 @@ import java.util.logging.Logger;
  * @author Renan Huf Silveira
  */
 public class EstagiarioDAO {
-       ConexaoRenan con;
+    ConexaoRenan con;
     PreparedStatement pstm;
     ResultSet rs;
 
