@@ -6,19 +6,19 @@
 
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.List"%>
-<%@page import="beans.Curso"%>
-<%@page import="bd.CursoDAO"%>
+<%@page import="beans.Estagiario"%>
+<%@page import="bd.EstagiarioDAO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <%
-            CursoDAO cursoDAO = new CursoDAO();
-            ArrayList<Curso> listCurso;
+            EstagiarioDAO eDAO = new EstagiarioDAO();
+            ArrayList<Estagiario> list = null;
              if (request.getParameter("nomeCurso") == null) {
-                listCurso = cursoDAO.listar();
+                list = eDAO.listar();
           } else {
-                listCurso = cursoDAO.consultar(request.getParameter("nomeCurso"));
+                //list = EstagiarioDAO.consultar(request.getParameter("nomeCurso"));
             }
         %>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -46,15 +46,15 @@
 
 
             <table class="table table-striped table-bordered">
-                <tr><th class="col-lg-3 h5 text-center"><b>Nome</b></th><th class="col-lg-3 h5 text-center"><b>Matrícula</b></th><th class="col-lg-1 h5 text-center"><b>Editar</b></th><th class="col-lg-1 h5 text-center"><b>Desativar</b></th></tr>
+                <tr><th class="col-lg-3 h5 text-center"><b>Mátricula</b></th><th class="col-lg-3 h5 text-center"><b>Nome</b></th><th class="col-lg-1 h5 text-center"><b>Editar</b></th><th class="col-lg-1 h5 text-center"><b>Desativar</b></th></tr>
                         <%
-                            for (int i = 0; i < listCurso.size(); i++) {
+                            for (int i = 0; i < list.size(); i++) {
                         %>
 
-                <tr><td class="col-lg-3 h5 text-center"><%=  listCurso.get(i).getNome()%></td>
-                    <td class="col-lg-3 h5 text-center"><%= listCurso.get(i).getTipo()%></td>
-                    <td class="col-lg-1 h5 text-center"><a class="btn btn btn-primary" href="EditarEstagiario.jsp?id=<%= listCurso.get(i).getId()%>"><span class="glyphicon glyphicon-pencil"></span> Editar</a></td>
-                    <td class="col-lg-1 h5 text-center"><form action="ExcluirCurso" method="post"><input type="hidden" name="idCurso" value="<%= listCurso.get(i).getId()%>"/><button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-remove"></span>Desativar</button></form></td></tr>    
+                <tr><td class="col-lg-3 h5 text-center"><%=  list.get(i).getMatricula() %></td>
+                    <td class="col-lg-3 h5 text-center"><%= list.get(i).getNome()%></td>
+                    <td class="col-lg-1 h5 text-center"><a class="btn btn btn-primary" href="EditarEstagiario.jsp?id=<%= list.get(i).getId()%>"><span class="glyphicon glyphicon-pencil"></span> Editar</a></td>
+                    <td class="col-lg-1 h5 text-center"><form action="ExcluirCurso" method="post"><input type="hidden" name="idCurso" value="<%= list.get(i).getId()%>"/><button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-remove"></span>Desativar</button></form></td></tr>    
 
                 <%
                     }

@@ -172,4 +172,26 @@ public class CursoDAO {
         }
         return curso;
     }
+    
+    public int consultarRetornaID(String nome) {
+        
+        String sql = "SELECT * FROM curso WHERE nome = ? and status = 1;";
+        int i = 0;
+        try {
+            pstm = this.con.conectar().prepareStatement(sql);
+            pstm.setString(1, nome);
+            rs = pstm.executeQuery();
+
+            while (rs.next()) {    //move o curso de registros
+                
+                i = (rs.getInt("id"));
+               
+            }
+            pstm.close();
+            con.desconectar();
+        } catch (SQLException ex) {
+            Logger.getLogger(CursoDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return i;
+    }
 }

@@ -16,12 +16,12 @@ public class Estagiario extends Pessoa {
     private int matricula;
     private String pai;
     private String mae;
-    private List<ContatoEstagiario> contatos; 
-    private Endereco endereco;
+    private int contato; 
+    private int endereco;
     private String disponibilidadeHorarioEstagio;
     private String empresaTrabalha;
     private String horarioTrabalha;
-    private Curso curso;
+    private int curso;
 
     public int getMatricula() {
         return matricula;
@@ -45,22 +45,6 @@ public class Estagiario extends Pessoa {
 
     public void setMae(String mae) {
         this.mae = mae;
-    }
-
-    public List<ContatoEstagiario> getContatos() {
-        return contatos;
-    }
-
-    public void setContatos(List<ContatoEstagiario> contatos) {
-        this.contatos = contatos;
-    }
-
-    public Endereco getEndereco() {
-        return endereco;
-    }
-
-    public void setEndereco(Endereco endereco) {
-        this.endereco = endereco;
     }
 
     public String getDisponibilidadeHorarioEstagio() {
@@ -87,13 +71,28 @@ public class Estagiario extends Pessoa {
         this.horarioTrabalha = horarioTrabalha;
     }
 
-    public Curso getCurso() {
+    public int getContato() {
+        return contato;
+    }
+
+    public void setContato(int contato) {
+        this.contato = contato;
+    }
+
+    public int getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(int endereco) {
+        this.endereco = endereco;
+    }
+
+    public int getCurso() {
         return curso;
     }
 
-    public void setCurso(Curso curso) {
+    public void setCurso(int curso) {
         this.curso = curso;
     }
-    
     
 }

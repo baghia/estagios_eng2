@@ -18,57 +18,57 @@
     </head>
     <body>
         <div class="container">
-            <form class="form-horizontal" role="form" action="CadastroEstagiario" method="Post">
+            <form class="form-horizontal" role="form" action="CadastroEstagiario" method="POST">
                 <div>
                     <h4 class="form-heading">Cadastro de Estágiario</h4>
                 </div>
-                
-                 <div>
+
+                <div>
                     <h4 class="form-heading">Estágiario</h4>
                 </div>
-                
+
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Matrícula:</label>
                     <div class="col-sm-3">
                         <input type="text" class="form-control" name="matricula">
                     </div>
                 </div>
-                
+
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Nome Completo:</label>
                     <div class="col-sm-3">
                         <input type="text" class="form-control" name="nome">
                     </div>
                 </div>
-                
+
                 <div class="form-group">
                     <label class="col-sm-2 control-label">RG:</label>
                     <div class="col-sm-3">
                         <input type="text" class="form-control" name="rg">
                     </div>
                 </div>
-                
+
                 <div class="form-group">
                     <label class="col-sm-2 control-label">CPF:</label>
                     <div class="col-sm-3">
                         <input type="text" class="form-control" name="cpf">
                     </div>
                 </div>
-                
+
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Data de Nascimento:</label>
                     <div class="col-sm-3">
-                        <input type="date" class="form-control" name="dtNascimento">
+                        <input type="text" class="form-control" name="dtNascimento">
                     </div>
                 </div>
-                
+
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Nome do Pai:</label>
                     <div class="col-sm-3">
                         <input type="text" class="form-control" name="nomePai">
                     </div>
                 </div>
-                
+
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Nome da Mãe:</label>
                     <div class="col-sm-3">
@@ -82,41 +82,48 @@
                         <input type="text" class="form-control" name="disponibilidade">
                     </div>
                 </div>
-                
+
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Empresa que Trabalha:</label>
                     <div class="col-sm-3">
-                        <input type="text" class="form-control" name="empresaTrabalha">
+                        <input type="text" class="form-control" name="empresa">
                     </div>
                 </div>
-                
+
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Curso:</label>
                     <div class="col-sm-3">
-                        <input type="text" class="form-control" name="Curso">
+                        <input type="text" class="form-control" name="curso">
                     </div>
                 </div>
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
+
+
+
+
+
+
+
+
+                <div>
+                    <h4 class="form-heading">Contato</h4>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Contato:</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" name="contatoValor" required>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
                 <div>
                     <h4 class="form-heading">Endereço</h4>
                 </div>

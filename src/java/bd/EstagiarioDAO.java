@@ -6,6 +6,9 @@
 
 package bd;
 
+import beans.ContatoEstagiario;
+import beans.Curso;
+import beans.EnderecoEstagiario;
 import beans.Estagiario;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -21,6 +24,9 @@ import java.util.logging.Logger;
 public class EstagiarioDAO {
     ConexaoRenan con;
     PreparedStatement pstm;
+    CursoDAO cDAO;
+    ContatoEstagiarioDAO ctDAO;
+    EnderecoEstagiarioDAO eeDAO;
     ResultSet rs;
 
     public EstagiarioDAO() {
@@ -38,10 +44,12 @@ public class EstagiarioDAO {
             pstm.setString(5, es.getDtNascimento());
             pstm.setString(6, es.getPai());
             pstm.setString(7, es.getMae());
+            pstm.setInt(8, es.getContato());
+            pstm.setInt(9, es.getEndereco());
             pstm.setString(10, es.getDisponibilidadeHorarioEstagio());
             pstm.setString(11, es.getEmpresaTrabalha());
             pstm.setString(12, es.getHorarioTrabalha());
-            
+            pstm.setInt(13, es.getCurso());            
             pstm.executeQuery();
             pstm.close();
             con.desconectar();
@@ -65,12 +73,16 @@ public class EstagiarioDAO {
                 es.setNome(rs.getString("nome"));
                 es.setRG(rs.getString("rg"));
                 es.setCPF(rs.getString("cpf"));
-                es.setDtNascimento("dtnascimento");
-                es.setPai("nomepai");
-                es.setMae("nomemae");
-                es.setDisponibilidadeHorarioEstagio("disponibilidadehorarioestagio");
-                es.setEmpresaTrabalha("empresatrabalha");
-                es.setHorarioTrabalha("horariotrabalha");                
+                es.setDtNascimento(rs.getString("dtnascimento"));
+                es.setPai(rs.getString("nomepai"));
+                es.setMae(rs.getString("nomemae"));
+                es.setDisponibilidadeHorarioEstagio(rs.getString("disponibilidadehorarioestagio"));
+                es.setEmpresaTrabalha(rs.getString("empresatrabalha"));
+                es.setHorarioTrabalha(rs.getString("horariotrabalha"));                
+                Curso c = cDAO.consultarId(rs.getInt("idcurso"));
+                es.setCurso(rs.getInt("idcurso"));
+                es.setContato(rs.getInt("idcontatos"));
+                es.setEndereco(rs.getInt("idenderecoestagiario"));
                 lista.add(es);
                 
             }
@@ -80,5 +92,37 @@ public class EstagiarioDAO {
             Logger.getLogger(CursoDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
         return lista;
+    }
+    
+    public static void main(String[] args) {
+        CursoDAO c = new CursoDAO();
+        ContatoEstagiario ce  = new ContatoEstagiario();
+        ce.setValor("99931111");
+        ContatoEstagiarioDAO cedao = new ContatoEstagiarioDAO();
+        
+        EnderecoEstagiario e = new EnderecoEstagiario();
+        EnderecoEstagiarioDAO ee = new EnderecoEstagiarioDAO();
+        e.setLogradouro("Rua 19 de maio");
+        e.setBairro("Bairro Flor do Nascer");
+        e.setCidade("Videira");
+        e.setCep("89560000");
+        e.setEstado("SC");
+        
+        Estagiario es = new Estagiario();
+        EstagiarioDAO esDao = new EstagiarioDAO();
+        es.setMatricula(1234567);
+        es.setNome("Teste da Silva");
+        es.setCPF("00000000000");
+        es.setRG("11111111");
+        es.setMae("Mãe da Silva");
+        es.setPai("Pai da Silva");
+        es.setContato(cedao.inserir(ce));
+        es.setEndereco(ee.inserir(e));
+        es.setCurso(c.consultarRetornaID("Ciência da Computação"));
+        es.setDisponibilidadeHorarioEstagio("Tarde");
+        es.setDtNascimento("03/10/1993");
+        es.setEmpresaTrabalha("Não Trabalha");
+        es.setHorarioTrabalha(" - ");
+        esDao.inserir(es);
     }
 }
