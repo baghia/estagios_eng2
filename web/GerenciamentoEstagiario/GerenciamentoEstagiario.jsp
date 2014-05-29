@@ -14,11 +14,11 @@
     <head>
         <%
             EstagiarioDAO eDAO = new EstagiarioDAO();
-            ArrayList<Estagiario> list = null;
-             if (request.getParameter("nomeCurso") == null) {
+            ArrayList<Estagiario> list;
+             if (request.getParameter("nomeEstagiario") == null) {
                 list = eDAO.listar();
           } else {
-                //list = EstagiarioDAO.consultar(request.getParameter("nomeCurso"));
+                list = eDAO.consultar(request.getParameter("nomeEstagiario"));
             }
         %>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -37,16 +37,16 @@
             <form class="form-horizontal" role="form" action="GerenciamentoEstagiario.jsp" method="get">
                 <div class="form-group">
                     <div class="col-sm-3">
-                        <input class="form-control" type="text" name="nomeCurso"/>
+                        <input class="form-control" type="text" name="nomeEstagiario"/>
                     </div>
                     <button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-search"></span> Procurar</button>
-                    <a class="btn btn-primary" href="CadastrarEstagiario.jsp"><span class="glyphicon glyphicon-plus"></span> Cadastrar Novo Estágiario</a>
+                    <a class="btn btn-primary" href="CadastrarEstagiario.jsp"><span class="glyphicon glyphicon-plus"></span> Cadastrar Novo Estagiário</a>
                 </div>
             </form>
 
 
             <table class="table table-striped table-bordered">
-                <tr><th class="col-lg-3 h5 text-center"><b>Mátricula</b></th><th class="col-lg-3 h5 text-center"><b>Nome</b></th><th class="col-lg-1 h5 text-center"><b>Editar</b></th><th class="col-lg-1 h5 text-center"><b>Desativar</b></th></tr>
+                <tr><th class="col-lg-3 h5 text-center"><b>Matrícula</b></th><th class="col-lg-3 h5 text-center"><b>Nome</b></th><th class="col-lg-1 h5 text-center"><b>Editar</b></th></tr>
                         <%
                             for (int i = 0; i < list.size(); i++) {
                         %>
@@ -54,8 +54,6 @@
                 <tr><td class="col-lg-3 h5 text-center"><%=  list.get(i).getMatricula() %></td>
                     <td class="col-lg-3 h5 text-center"><%= list.get(i).getNome()%></td>
                     <td class="col-lg-1 h5 text-center"><a class="btn btn btn-primary" href="EditarEstagiario.jsp?id=<%= list.get(i).getId()%>"><span class="glyphicon glyphicon-pencil"></span> Editar</a></td>
-                    <td class="col-lg-1 h5 text-center"><form action="ExcluirCurso" method="post"><input type="hidden" name="idCurso" value="<%= list.get(i).getId()%>"/><button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-remove"></span>Desativar</button></form></td></tr>    
-
                 <%
                     }
                 %>

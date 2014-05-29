@@ -175,13 +175,13 @@ public class CursoDAO {
     
     public int consultarRetornaID(String nome) {
         
-        String sql = "SELECT * FROM curso WHERE nome = ? and status = 1;";
+        String sql = "SELECT * FROM curso WHERE nome =  ?  and status = 1 LIMIT 1";
         int i = 0;
         try {
             pstm = this.con.conectar().prepareStatement(sql);
             pstm.setString(1, nome);
             rs = pstm.executeQuery();
-
+            System.out.println(sql);
             while (rs.next()) {    //move o curso de registros
                 
                 i = (rs.getInt("id"));

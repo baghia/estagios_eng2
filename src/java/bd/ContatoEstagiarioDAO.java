@@ -109,6 +109,20 @@ public class ContatoEstagiarioDAO {
         return i;
     }
     
+    public void alterarContatoEstagiario(ContatoEstagiario es) {
+        String sql = "UPDATE contato SET valor = ?  where id = ?";
+        try {
+            pstm = con.conectar().prepareStatement(sql);
+            pstm.setString(1, es.getValor());
+            pstm.setInt(2, es.getId());
+            pstm.executeQuery();
+            pstm.close();
+            con.desconectar();
+        } catch (SQLException ex) {
+
+        }
+    }
+    
     public static void main(String[] args) {
         ContatoEstagiario ce = new ContatoEstagiario();
         ce.setValor("35341111");

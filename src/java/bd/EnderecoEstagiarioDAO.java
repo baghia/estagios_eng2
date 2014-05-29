@@ -123,6 +123,25 @@ public class EnderecoEstagiarioDAO {
         return i;
     }
     
+    ////////////////////////////////////////////
+    public void alterarEnderecoEstagiario(EnderecoEstagiario es) {
+        String sql = "UPDATE enderecoestagiario SET logradouro = ? ,bairro = ? , Cidade = ? , estado = ? , cep = ? where id=?";
+        try {
+            pstm = con.conectar().prepareStatement(sql);
+            pstm.setString(1, es.getLogradouro());
+            pstm.setString(2, es.getBairro());
+            pstm.setString(3, es.getCidade());
+            pstm.setString(4, es.getEstado());
+            pstm.setString(5, es.getCep());
+            pstm.setInt(6, es.getId());
+            pstm.executeQuery();
+            pstm.close();
+            con.desconectar();
+        } catch (SQLException ex) {
+
+        }
+    }
+    
     public static void main(String[] args) {
         EnderecoEstagiario e = new EnderecoEstagiario();
         EnderecoEstagiarioDAO ee = new EnderecoEstagiarioDAO();

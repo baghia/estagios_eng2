@@ -18,7 +18,7 @@
     </head>
     <body>
         <div class="container">
-            <form class="form-horizontal" role="form" action="CadastroEstagiario" method="POST">
+            <form class="form-horizontal" role="form" action="../CadastroEstagiario" method="Post">
                 <div>
                     <h4 class="form-heading">Cadastro de Estágiario</h4>
                 </div>
@@ -30,70 +30,77 @@
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Matrícula:</label>
                     <div class="col-sm-3">
-                        <input type="text" class="form-control" name="matricula">
+                        <input type="text" class="form-control" name="matricula"></input>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Nome Completo:</label>
                     <div class="col-sm-3">
-                        <input type="text" class="form-control" name="nome">
+                        <input type="text" class="form-control" name="nome"></input>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label class="col-sm-2 control-label">RG:</label>
                     <div class="col-sm-3">
-                        <input type="text" class="form-control" name="rg">
+                        <input type="text" class="form-control" name="rg"></input>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label class="col-sm-2 control-label">CPF:</label>
                     <div class="col-sm-3">
-                        <input type="text" class="form-control" name="cpf">
+                        <input type="text" class="form-control" name="cpf"></input>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Data de Nascimento:</label>
                     <div class="col-sm-3">
-                        <input type="text" class="form-control" name="dtNascimento">
+                        <input type="text" class="form-control" name="dtNascimento"></input>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Nome do Pai:</label>
                     <div class="col-sm-3">
-                        <input type="text" class="form-control" name="nomePai">
+                        <input type="text" class="form-control" name="nomePai"></input>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Nome da Mãe:</label>
                     <div class="col-sm-3">
-                        <input type="text" class="form-control" name="nomeMae">
+                        <input type="text" class="form-control" name="nomeMae"></input>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Disponibilidade de Horário para Estagio:</label>
                     <div class="col-sm-3">
-                        <input type="text" class="form-control" name="disponibilidade">
+                        <input type="text" class="form-control" name="disponibilidade"></input>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Empresa que Trabalha:</label>
                     <div class="col-sm-3">
-                        <input type="text" class="form-control" name="empresa">
+                        <input type="text" class="form-control" name="empresa"></input>
                     </div>
                 </div>
 
                 <div class="form-group">
+                    <label class="col-sm-2 control-label">Horário Trabalha:</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" name="horario"></input>
+                    </div>
+                </div>
+                
+                <div class="form-group">
                     <label class="col-sm-2 control-label">Curso:</label>
                     <div class="col-sm-3">
-                        <input type="text" class="form-control" name="curso">
+                        <input type="text" class="form-control" name="curso"></input>
                     </div>
                 </div>
 
@@ -111,7 +118,7 @@
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Contato:</label>
                     <div class="col-sm-3">
-                        <input type="text" class="form-control" name="contatoValor" required>
+                        <input type="text" class="form-control" name="contatoValor"></input>
                     </div>
                 </div>
 
@@ -131,35 +138,35 @@
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Logradouro:</label>
                     <div class="col-sm-3">
-                        <input type="text" class="form-control" name="logradouro">
+                        <input type="text" class="form-control" name="logradouro"></input>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Bairro:</label>
                     <div class="col-sm-3">
-                        <input type="text" class="form-control" name="bairro">
+                        <input type="text" class="form-control" name="bairro"></input>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Cidade:</label>
                     <div class="col-sm-3">
-                        <input type="text" class="form-control" name="cidade">
+                        <input type="text" class="form-control" name="cidade"></input>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Estado:</label>
                     <div class="col-sm-3">
-                        <input type="text" class="form-control" name="estado">
+                        <input type="text" class="form-control" name="estado"></input>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label class="col-sm-2 control-label">CEP:</label>
                     <div class="col-sm-3">
-                        <input type="text" class="form-control" name="cep" pattern="[0-9]{5}-[0-9]{3}" placeholder="00000-000">
+                        <input type="text" class="form-control" name="cep" pattern="[0-9]{5}-[0-9]{3}" placeholder="00000-000"></input>
                     </div>
                 </div>
 
