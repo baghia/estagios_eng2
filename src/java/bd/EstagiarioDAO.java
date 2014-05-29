@@ -114,7 +114,6 @@ public class EstagiarioDAO {
                 es.setDisponibilidadeHorarioEstagio(rs.getString("disponibilidadehorarioestagio"));
                 es.setEmpresaTrabalha(rs.getString("empresatrabalha"));
                 es.setHorarioTrabalha(rs.getString("horariotrabalha"));                
-                Curso c = cDAO.consultarId(rs.getInt("idcurso"));
                 es.setCurso(rs.getInt("idcurso"));
                 es.setContato(rs.getInt("idcontatos"));
                 es.setEndereco(rs.getInt("idenderecoestagiario"));
@@ -196,37 +195,5 @@ public class EstagiarioDAO {
         } catch (SQLException ex) {
 
         }
-    }
-    
-    public static void main(String[] args) {
-        CursoDAO c = new CursoDAO();
-        ContatoEstagiario ce  = new ContatoEstagiario();
-        ce.setValor("99931111");
-        ContatoEstagiarioDAO cedao = new ContatoEstagiarioDAO();
-        
-        EnderecoEstagiario e = new EnderecoEstagiario();
-        EnderecoEstagiarioDAO ee = new EnderecoEstagiarioDAO();
-        e.setLogradouro("Rua 19 de maio");
-        e.setBairro("Bairro Flor do Nascer");
-        e.setCidade("Videira");
-        e.setCep("89560000");
-        e.setEstado("SC");
-        
-        Estagiario es = new Estagiario();
-        EstagiarioDAO esDao = new EstagiarioDAO();
-        es.setMatricula(1234567);
-        es.setNome("Teste da Silva");
-        es.setCPF("00000000000");
-        es.setRG("11111111");
-        es.setMae("Mãe da Silva");
-        es.setPai("Pai da Silva");
-        es.setContato(cedao.inserir(ce));
-        es.setEndereco(ee.inserir(e));
-        es.setCurso(c.consultarRetornaID("Ciência da Computação"));
-        es.setDisponibilidadeHorarioEstagio("Tarde");
-        es.setDtNascimento("03/10/1993");
-        es.setEmpresaTrabalha("Não Trabalha");
-        es.setHorarioTrabalha(" - ");
-        esDao.inserir(es);
     }
 }
